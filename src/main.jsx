@@ -9,6 +9,7 @@ import Signup from './Components/Signup'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from "@material-tailwind/react";
+import Form from './Components/Form.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: '/signup',
         element: <Signup />,
       },
+      {
+        path: '/form',
+        element: <Form />,
+      },
     ]
   }
 ])
@@ -36,6 +41,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeProvider>
       <RouterProvider router={router} />
     </ThemeProvider>
-    
+
   </React.StrictMode>,
 )
