@@ -1,6 +1,7 @@
 import LegalAI from '../assets/LegalAI.png'
-
+import { useAuth0 } from "@auth0/auth0-react";
 function Navbar() {
+  const { loginWithRedirect , logout , user, isAuthenticated, isLoading } = useAuth0();
     return (
         <div className="bg-white">
   <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 ">
@@ -19,11 +20,12 @@ function Navbar() {
       </ul>
 
       <div className="flex items-center gap-4 flex-wrap">
-        <button
-          className="inline-flex h-10 w-25  items-center justify-center gap-1.5 rounded border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring"
-          type="button"
-        >
-          <span className="text-sm font-medium"> Sign Up </span>
+      {/* <button
+  onClick={() => loginWithRedirect()}
+  className="inline-flex h-10 w-25 items-center justify-center gap-1.5 rounded border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring"
+>
+  <span className="text-sm font-medium">Sign Up</span>
+
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,16 +41,25 @@ function Navbar() {
               d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
             />
           </svg>
-        </button>
+        </button> */}
 
                                           {/* LOGIN BUTTON FOR YASH */}
 
-        <button
-          className="inline-block rounded h-10 w-25 px-4 bg-indigo-600  text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
-          type="button"
-        >
-          Login           
-        </button>
+                                          <button
+  onClick={() => loginWithRedirect()}
+  className="inline-block rounded h-10 w-25 px-4 bg-indigo-600 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
+>
+  Log in / Sign Up
+</button>
+{isAuthenticated && (
+              <button
+                onClick={() => logout({ returnTo: window.location.origin })}
+                className="inline-block rounded h-10 w-25 px-4 bg-red-600 text-sm font-medium text-white transition hover:bg-red-700 focus:outline-none focus:ring"
+              >
+                Log Out
+              </button>
+            )}
+
       </div>
     </div>
   </div>
