@@ -4,7 +4,7 @@ function Steps() {
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">How does it work?</h2>
-                    <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+                    <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600"></p>
                 </div>
 
                 <div className="relative mt-12 lg:mt-20">
@@ -18,7 +18,7 @@ function Steps() {
                                 <span className="text-xl font-semibold text-gray-700"> 1 </span>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Create a free account.</h3>
-                            <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                            <p className="mt-4 text-base text-gray-600">Sign up in seconds to access our AI platform. Get 5 free trials to explore our services with zero commitment or cost. Experience the power of AI risk-free.</p>
                         </div>
 
                         <div>
@@ -26,7 +26,7 @@ function Steps() {
                                 <span className="text-xl font-semibold text-gray-700"> 2 </span>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Enter Case Details.</h3>
-                            <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                            <p className="mt-4 text-base text-gray-600">Share your specific legal situation or query through our user-friendly interface. Provide relevant details and context to ensure the most accurate AI analysis of your case. Our secure system protects your confidential information.</p>
                         </div>
 
                         <div>
@@ -34,7 +34,7 @@ function Steps() {
                                 <span className="text-xl font-semibold text-gray-700"> 3 </span>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Get AI Solution!</h3>
-                            <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                            <p className="mt-4 text-base text-gray-600">Receive comprehensive AI-generated legal insights within minutes. Get custom analysis, relevant precedents, and actionable recommendations tailored to your case. Access clear, professional guidance backed by advanced legal AI technology.</p>
                         </div>
                     </div>
                 </div>
