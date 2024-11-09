@@ -15,7 +15,7 @@ function Features() {
                             <path d="M45 29H33V45H41C43.209 45 45 43.209 45 41V29Z" fill="#D4D4D8" stroke="#161616" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">AI Powered</h3>
-                        <p className="mt-5 text-base text-gray-600 font-pj">Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.</p>
+                        <p className="mt-5 text-base text-gray-600 font-pj">Harness cutting-edge artificial intelligence that analyzes legal documents, predicts case outcomes, and provides data-driven insights with exceptional accuracy and speed.</p>
                     </div>
 
                     <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200">
@@ -27,7 +27,7 @@ function Features() {
                             <path d="M28 1H37V10" stroke="#161616" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">Speech To Text</h3>
-                        <p className="mt-5 text-base text-gray-600 font-pj">Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.</p>
+                        <p className="mt-5 text-base text-gray-600 font-pj">Convert verbal communications into precise written text instantly. Perfect for recording client meetings, court proceedings, and legal dictations with multi-language support.</p>
                     </div>
 
                     <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200">
@@ -38,7 +38,7 @@ function Features() {
                             <path d="M35 7H24V35H35V7Z" fill="#D4D4D8" stroke="#161616" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">PDF Generation</h3>
-                        <p className="mt-5 text-base text-gray-600 font-pj">Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.</p>
+                        <p className="mt-5 text-base text-gray-600 font-pj">Transform your legal documents into professional, court-ready PDFs automatically. Generate standardized documents with proper formatting, headers, and digital signatures.</p>
                     </div>
 
                     <div className="md:p-8 lg:p-14 md:border-t md:border-gray-200">
@@ -53,7 +53,7 @@ function Features() {
                             <path d="M37 1H5C2.79086 1 1 2.79086 1 5V37C1 39.2091 2.79086 41 5 41H37C39.2091 41 41 39.2091 41 37V5C41 2.79086 39.2091 1 37 1Z" stroke="#161616" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">Lawyer Connect</h3>
-                        <p className="mt-5 text-base text-gray-600 font-pj">Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.</p>
+                        <p className="mt-5 text-base text-gray-600 font-pj">Access a nationwide network of verified legal professionals. Find specialized attorneys, collaborate on cases, and get expert consultations when you need additional expertise.</p>
                     </div>
 
                     <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t">
@@ -77,7 +77,7 @@ function Features() {
                             />
                         </svg>
                         <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">India Exclusive</h3>
-                        <p className="mt-5 text-base text-gray-600 font-pj">Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.</p>
+                        <p className="mt-5 text-base text-gray-600 font-pj">Tailored specifically for Indian law and legal procedures. Stay compliant with local regulations and access region-specific legal resources and precedents.</p>
                     </div>
 
                     <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t">
@@ -86,7 +86,7 @@ function Features() {
                             <path d="M19 1C9.059 1 1 9.059 1 19H19V1Z" fill="#D4D4D8" stroke="#161616" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">Auth0 Secured</h3>
-                        <p className="mt-5 text-base text-gray-600 font-pj">Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.</p>
+                        <p className="mt-5 text-base text-gray-600 font-pj">Enterprise-grade security powered by Auth0. Your sensitive legal data is protected with end-to-end encryption, multi-factor authentication, and continuous monitoring.</p>
                     </div>
                 </div>
             </div>
