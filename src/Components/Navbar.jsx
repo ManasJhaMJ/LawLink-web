@@ -11,11 +11,11 @@ function Navbar() {
 
         
      
-      <ul className='flex flex-row gap-5 text-sm font-medium flex-1 flex-wrap justify-center items-center'>
-        <li className='font-mullish'>Our Services</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>More</li>
+      <ul className='flex flex-row gap-5 text-sm  flex-1 flex-wrap justify-center items-center'>
+        <li className='text-lg'>Our Services</li>
+        <li className='text-lg'>About Us</li>
+        <li className='text-lg'>Contact Us</li>
+        <li className='text-lg'>More</li>
       </ul>
 
       <div className="flex items-center gap-4 flex-wrap">
