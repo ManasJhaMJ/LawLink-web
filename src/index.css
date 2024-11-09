@@ -141,3 +141,57 @@ button {
 button:disabled {
   background-color: #9e9e9e;
 }
+
+.form-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.chatbox-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chatbox {
+  margin-bottom: 20px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.chat-message p {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
