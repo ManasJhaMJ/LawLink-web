@@ -8,6 +8,8 @@ import Login from './Components/Login'
 import Signup from './Components/Signup'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from "@material-tailwind/react";
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -31,6 +33,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+    
   </React.StrictMode>,
 )
