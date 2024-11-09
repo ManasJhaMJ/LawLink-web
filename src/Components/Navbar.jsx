@@ -12,7 +12,7 @@ function Navbar() {
         
      
       <ul className='flex flex-row gap-5 text-sm font-medium flex-1 flex-wrap justify-center items-center'>
-        <li>Our Services</li>
+        <li className='font-mullish'>Our Services</li>
         <li>About Us</li>
         <li>Contact Us</li>
         <li>More</li>
