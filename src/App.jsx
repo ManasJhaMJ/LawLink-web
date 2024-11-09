@@ -1,9 +1,14 @@
-function App() {
+import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
+import { Outlet } from 'react-router-dom'
 
+function App() {
 
   return (
     <>
-      <h1>LegalAI</h1>
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   )
 }
