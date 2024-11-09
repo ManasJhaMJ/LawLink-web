@@ -11,6 +11,7 @@ import Signup from './Components/Signup'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from "@material-tailwind/react";
 import Form from './Components/Form.jsx'
+import Connect from './Components/Connect.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: '/form',
         element: <Form />,
       },
+      {
+        path: '/connect',
+        element: <Connect/>
+      }
     ]
   }
 ])
