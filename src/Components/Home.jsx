@@ -1,81 +1,55 @@
-import justice from '../assets/justice.jpg'
-import MaskImg from '../assets/Mask-IMG.png'
-import Immigration from '../assets/immigration.png'
-import Estate from '../assets/estate.png'
+import Testimonials from './Testimonials'
+import Features from './Features'
+import Pricing from './Pricing'
+import Steps from './Steps'
 
 function Home() {
     return (
-    <>
-        <div className='mx-auto w-full flex'>
-            <div className='mx-auto px-5 w-1/2'>
-                <div className=' flex items-center justify-center mt-10 text-4xl font-bold text-blue-600'>Navigating Legal Waters,<br></br> Securing  Your Tomorrow</div>
+        <>
+            <section
+                className="relative w-full h-screen bg-cover bg-center"
+                style={{
+                    backgroundImage: "url('https://www.onelegal.com/wp-content/uploads/2024/01/what-to-know-about-being-a-legal-advocate.jpg')",
+                }}
+            >
+                {/* Dark overlay for text contrast */}
+                <div className="absolute inset-0 bg-black opacity-50"></div>
 
-                <p className='font-medium flex items-center justify-center mt-10 text-lg'>We advocate for customers and underrepresented parties,<br></br> amplifying their voices and safeguarding their rights </p>
-
-                <div className='flex gap-5 items-center justify-center'>
-
-
-                <button
-                className="inline-block rounded h-10 w-25 px-4 bg-indigo-600  text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring mt-5"
-                type="button">
-                    Get Started
-                </button>
-
-                <button
-                className="inline-block rounded h-10 w-25 px-4 bg-indigo-600  text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring mt-5"
-                type="button">
-                    About Us           
-                </button>
+                {/* Content Centering */}
+                <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white px-6">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+                        Welcome to JusticeGPT
+                    </h1>
+                    <p className="text-lg sm:text-xl mb-6 max-w-3xl mx-auto">
+                        Get reliable and expert legal advice at your fingertips. Our AI-powered legal assistant is here to help with all your legal needs.
+                    </p>
+                    <div className="flex space-x-4">
+                        <a
+                            href="/form"
+                            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md text-lg"
+                        >
+                            AI Assistant
+                        </a>
+                        <a
+                            href="/connect"
+                            className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md text-lg hover:bg-white hover:text-blue-600"
+                        >
+                            Lawyer Connect
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div className='w-1/2 overflow-hidden flex justify-center items-center '><img src={MaskImg} alt='MaskImg' className='h-80 px-12 pr-15 object-cover object-center  '></img></div>
-            
 
-            
-        </div>
+            <section>
+                <Testimonials />
+                <Features />
+                <Pricing />
+                <Steps />
+            </section>
 
-        <div className='flex flex-wrap mx-auto mt-12'>
-                <div className='w-1/2'>
-                    
-                    <div className=' pl-5 text-4xl flex items-center justify-center text-center font-bold text-blue-400'>
-                    Defending your rights, crafting your victory
-                    </div> 
+        </>
 
-                    <p className='mt-10 text-center text-lg'>
-                        We excel in advancing for consumers and smaller entities in legal battles against corporate giants. Our focus areas encompass cases involving emission scandals , data breaches, online gambling , estabhlishments and broader consumer rights issues
-                    </p>   
-                </div>
-
-                <div className='w-1/2'>
-                    <img src={justice} className='h-30 w-30 px-10 ' ></img>
-                </div>
-        </div>
-
-        <div className='flex justify-center items-center mx-auto mt-12'>
-            <div className='mx-auto'>
-
-            <h3 className='font-bold text-blue-600 text-center text-4xl'>Estate Planning and Probate</h3>
-            
-            <div className='w-full h-full flex items-center justify-center'>
-            <img src={Estate} className='h-45'></img>
-            </div>
-            <p className='text-center'>Our focus encompasses cases involving<br></br> emission scandals, data breaches,<br></br> online gambling estabhlishments</p>
-
-            </div>
-
-            <div className='mx-auto'>
-
-            <h3 className='font-bold text-blue-600 text-center text-4xl pb-14'>Immigration Laws</h3>
-            
-            <div className='w-full h-full flex items-center justify-center'>
-            <img src={Immigration} className='h-60 w-60'></img>
-            </div>
-            <p className='text-center'>We excel in advocating for consumers and smaller entities</p>
-            </div>
-        </div>
-    </>
-        
     )
 }
 

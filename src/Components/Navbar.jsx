@@ -1,70 +1,118 @@
 import LegalAI from '../assets/LegalAI.png'
 import { useAuth0 } from "@auth0/auth0-react";
-function Navbar() {
-  const { loginWithRedirect , logout , user, isAuthenticated, isLoading } = useAuth0();
-    return (
-        <div className="bg-white">
-  <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 ">
-    <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-        <div className='flex justify-center items-center'>
-            <img src={LegalAI} alt='Legal AI' width={50} height={50} ></img>
+
+import { useState } from "react";
+
+const Navbar = () => {
+  const { loginWithRedirect, logout, user, isAuthenticated, isLoading } = useAuth0();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Toggle the menu on mobile view
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <nav className="bg-white shadow-md px-6 py-3 w-full fixed top-0 left-0 z-50">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+        {/* Logo */}
+        <div className="text-2xl font-semibold text-blue-600">
+          <a href="/">Legal_Ai</a>
         </div>
 
-        
-     
-      <ul className='flex flex-row gap-5 text-sm  flex-1 flex-wrap justify-center items-center'>
-        <li className='text-lg'>Our Services</li>
-        <li className='text-lg'>About Us</li>
-        <li className='text-lg'>Contact Us</li>
-        <li className='text-lg'>More</li>
-      </ul>
+        {/* Navbar Links (desktop view) */}
+        <div className="hidden md:flex space-x-8">
+          <a href="/" className="text-gray-700 hover:text-blue-600">
+            Home
+          </a>
+          <a href="/about" className="text-gray-700 hover:text-blue-600">
+            About
+          </a>
+          <a href="/services" className="text-gray-700 hover:text-blue-600">
+            Services
+          </a>
+          <a href="/contact" className="text-gray-700 hover:text-blue-600">
+            Contact
+          </a>
+        </div>
 
-      <div className="flex items-center gap-4 flex-wrap">
-      {/* <button
-  onClick={() => loginWithRedirect()}
-  className="inline-flex h-10 w-25 items-center justify-center gap-1.5 rounded border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring"
->
-  <span className="text-sm font-medium">Sign Up</span>
+        {/* Login Button */}
+        <div className="hidden md:flex">
+          <button
+            onClick={() => loginWithRedirect()}
+            className="inline-block rounded h-10 w-25 px-4 bg-blue-600 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
+          >
+            Log in / Sign Up
+          </button>
+          {isAuthenticated && (
+            <button
+              onClick={() => logout({ returnTo: window.location.origin })}
+              className="inline-block rounded h-10 w-25 px-4 bg-red-600 text-sm font-medium text-white transition hover:bg-red-700 focus:outline-none focus:ring"
+            >
+              Log Out
+            </button>
+          )}
+        </div>
 
-
+        {/* Hamburger Menu (Mobile view) */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-white focus:outline-none"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="size-4"
+            className="h-6 w-6"
             fill="none"
-            viewBox="0 0 24 24"
             stroke="currentColor"
+            viewBox="0 0 24 24"
             strokeWidth="2"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
-        </button> */}
-
-                                          {/* LOGIN BUTTON FOR YASH */}
-
-                                          <button
-  onClick={() => loginWithRedirect()}
-  className="inline-block rounded h-10 w-25 px-4 bg-indigo-600 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
->
-  Log in / Sign Up
-</button>
-{isAuthenticated && (
-              <button
-                onClick={() => logout({ returnTo: window.location.origin })}
-                className="inline-block rounded h-10 w-25 px-4 bg-red-600 text-sm font-medium text-white transition hover:bg-red-700 focus:outline-none focus:ring"
-              >
-                Log Out
-              </button>
-            )}
-
+        </button>
       </div>
-    </div>
-  </div>
-</div>
-    )
-}
 
-export default Navbar
+      {/* Mobile Menu (Conditional rendering) */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white shadow-md py-4 space-y-4">
+          <a
+            href="/"
+            className="block text-black hover:text-blue-600 px-6 py-2"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="block text-black hover:text-blue-600 px-6 py-2"
+          >
+            About
+          </a>
+          <a
+            href="/services"
+            className="block text-black hover:text-blue-600 px-6 py-2"
+          >
+            Services
+          </a>
+          <a
+            href="/contact"
+            className="block text-black hover:text-blue-600 px-6 py-2"
+          >
+            Contact
+          </a>
+          <a
+            href="/login"
+            className="block text-white bg-blue-600 px-6 mx-5 py-2 rounded-md hover:bg-blue-700 text-center"
+          >
+            Login
+          </a>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
