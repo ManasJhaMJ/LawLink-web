@@ -1,7 +1,7 @@
 import LegalAI from '../assets/LegalAI.png'
 import { useAuth0 } from "@auth0/auth0-react";
 function Navbar() {
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect , logout , user, isAuthenticated, isLoading } = useAuth0();
     return (
         <div className="bg-white">
   <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 ">
@@ -51,6 +51,14 @@ function Navbar() {
 >
   Log in / Sign Up
 </button>
+{isAuthenticated && (
+              <button
+                onClick={() => logout({ returnTo: window.location.origin })}
+                className="inline-block rounded h-10 w-25 px-4 bg-red-600 text-sm font-medium text-white transition hover:bg-red-700 focus:outline-none focus:ring"
+              >
+                Log Out
+              </button>
+            )}
 
       </div>
     </div>
