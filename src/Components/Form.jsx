@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = import.meta.env.OPENAI_API_KEY;
 import { saveFormData } from '../api.js'; // Import saveFormData from api.js
 import Recommendation from './Recommendation';
 import Generation from './Generation';

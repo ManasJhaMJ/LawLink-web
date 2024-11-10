@@ -1,4 +1,4 @@
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = import.meta.env.OPENAI_API_KEY;
 
 import { Link } from 'react-router-dom';
 

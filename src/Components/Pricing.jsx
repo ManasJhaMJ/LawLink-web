@@ -102,8 +102,8 @@ const PricingCard = ({
                     <a
                         href="/#"
                         className={` ${active
-                            ? "block w-full rounded-md border border-primary bg-primary p-3 text-center text-base font-medium text-black transition hover:bg-opacity-90"
-                            : "block w-full rounded-md border border-stroke bg-transparent p-3 text-center text-base font-medium text-primary transition hover:border-primary hover:bg-primary hover:text-black text-white bg-light-blue-400 dark:border-dark-3"
+                            ? "block w-full rounded-md border border-primary bg-primary p-3 text-center text-base font-medium border-l-light-blue-600 text-black transition hover:bg-opacity-90"
+                            : "block w-full rounded-md border border-stroke bg-transparent p-3 text-center text-base font-medium text-primary transition     hover:bg-primary hover:border-l-light-blue-800 text-black bg-light-blue-400 dark:border-dark-3"
                             } `}
                     >
                         {buttonText}
