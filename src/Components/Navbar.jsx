@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-semibold text-blue-600">
-          <a href="/">LawLink</a>
+          <a href="/">Law_Link</a>
         </div>
 
         {/* Navbar Links (desktop view) */}
@@ -28,7 +28,7 @@ const Navbar = () => {
           <a href="/about" className="text-gray-700 hover:text-blue-600">
             About
           </a>
-          <a href="/services" className="text-gray-700 hover:text-blue-600">
+          <a href="/form" className="text-gray-700 hover:text-blue-600">
             Services
           </a>
           <a href="/contact" className="text-gray-700 hover:text-blue-600">
@@ -92,7 +92,7 @@ const Navbar = () => {
             About
           </a>
           <a
-            href="/services"
+            href="/form"
             className="block text-black hover:text-blue-600 px-6 py-2"
           >
             Services

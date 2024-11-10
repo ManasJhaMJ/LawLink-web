@@ -183,7 +183,7 @@ const Form = () => {
                         <div className="form-step">
                             <h2>Step 1: Personal Information</h2>
                             <label>
-                                Name:
+                                Legal Name:
                                 <input
                                     type="text"
                                     name="name"
@@ -193,7 +193,7 @@ const Form = () => {
                                 />
                             </label>
                             <label>
-                                Age:
+                                Legal Age:
                                 <input
                                     type="number"
                                     name="age"
@@ -203,7 +203,7 @@ const Form = () => {
                                 />
                             </label>
                             <label>
-                                State:
+                                State of Incident:
                                 <input
                                     type="text"
                                     name="state"

@@ -24,9 +24,11 @@ const Generation = ({ userData, assistantRecommendation }) => {
         // Add the assistant's recommendation to the PDF
         doc.text('Assistant\'s Recommendation:', 20, 100);
 
+        doc.text('Consulting a lawyer preferred. Visit LawLink for more information.', 20, 110);
+
         // Wrap the assistant recommendation text to avoid overflow
         const marginLeft = 20;
-        const marginTop = 110;
+        const marginTop = 130;
         const maxWidth = 180; // Width for wrapping text
         doc.setFontSize(12);
         doc.text(assistantRecommendation, marginLeft, marginTop, { maxWidth });
