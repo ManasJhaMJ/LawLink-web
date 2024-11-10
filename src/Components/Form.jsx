@@ -1,6 +1,8 @@
 const apiKey = process.env.OPENAI_API_KEY;
 
 import React, { useState } from 'react';
+import Recommendation from './Recommendation';
+import Generation from './Generation';
 
 const Form = () => {
     const [formData, setFormData] = useState({
@@ -15,6 +17,7 @@ const Form = () => {
     const [isSubmitted, setIsSubmitted] = useState(false); // To track if the form is submitted
     const [chatMessages, setChatMessages] = useState([]); // Store chat messages
     const [userQuery, setUserQuery] = useState(''); // Store user query in the chat
+    const [assistantRecommendation, setAssistantRecommendation] = useState('');
 
     // Handle form data changes
     const handleChange = (e) => {
@@ -76,6 +79,7 @@ const Form = () => {
             if (data.choices && data.choices.length > 0) {
                 const aiResponse = data.choices[0].message.content;
                 setIsSubmitted(true); // Mark form as submitted to show chatbox
+                setAssistantRecommendation(aiResponse);
 
                 // Add AI response to chat messages with typing effect
                 typeEffect(aiResponse);
@@ -109,7 +113,7 @@ const Form = () => {
             if (index === message.length) {
                 clearInterval(typingInterval);
             }
-        }, 100); // Adjust typing speed here
+        }, 20); // Adjust typing speed here
     };
 
     const handleSendMessage = async (e) => {
@@ -276,6 +280,10 @@ const Form = () => {
                         />
                         <button type="submit">Send</button>
                     </form>
+
+                    <Generation userData={formData} assistantRecommendation={assistantRecommendation} />
+
+                    <Recommendation caseSummary={formData.caseSummary} caseDescription={formData.caseDescription} />
                 </div>
             )}
         </div>

@@ -26,7 +26,7 @@ function Features() {
                             <path d="M5 17L15 7L23 15L37 1" stroke="#161616" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M28 1H37V10" stroke="#161616" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                        <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">Speech To Text</h3>
+                        <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">Easy to Use</h3>
                         <p className="mt-5 text-base text-gray-600 font-pj">Convert verbal communications into precise written text instantly. Perfect for recording client meetings, court proceedings, and legal dictations with multi-language support.</p>
                     </div>
 

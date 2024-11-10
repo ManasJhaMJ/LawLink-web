@@ -143,6 +143,7 @@ button:disabled {
   padding: 20px;
   max-width: 800px;
   margin: auto;
+  margin-top: 5rem;
 }
 
 .form-step {
@@ -159,7 +160,8 @@ textarea {
   border: 1px solid #ccc;
 }
 
-button {
+button,
+.button {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -191,4 +193,104 @@ button:hover {
   background-color: #f1f1f1;
   padding: 10px;
   border-radius: 5px;
+}
+
+.recommendation-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.recommendation-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lawyer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.lawyer-card {
+  width: 250px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.lawyer-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.lawyer-card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.lawyer-card p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.recommendation-container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.lawyer-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.lawyer-image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.generate-pdf-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-pdf-btn:hover {
+  background-color: #0056b3;
 }
