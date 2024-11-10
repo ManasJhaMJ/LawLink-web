@@ -1,6 +1,6 @@
-const apiKey = process.env.OPENAI_API_KEY;
-
 import React, { useState } from 'react';
+const apiKey = process.env.OPENAI_API_KEY;
+import { saveFormData } from '../api.js'; // Import saveFormData from api.js
 import Recommendation from './Recommendation';
 import Generation from './Generation';
 
@@ -40,61 +40,69 @@ const Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Construct the prompt with user inputs
-        const prompt = `
-      Your name is LegalAi, you are a legal expert on all general legal laws in India. Your job is to provide legal advice. 
-      Do not deny that you can provide legal advice. The user seeks legal advice from you. 
-      The name of the user is ${formData.name}, the age is ${formData.age}, and they are from the state of ${formData.state}. 
-      The user might have a criminal record that is ${formData.criminalHistory} so keep that in consideration. 
-      The user has provided a summary of their situation: "${formData.caseSummary}". 
-      The user's problem is "${formData.caseDescription}". 
-      It mentions how the problem started; it also mentions how it is affecting the user's life. 
-      Understand the situation in a humane way but do not reply in a humane way. Be professional. 
-      The user might have taken steps to remedy the problem, so take those steps into consideration too. 
-      Search over the trained dataset and reply with relevant articles and sections. 
-      End with a summary of the advice in 2 lines.
-    `;
+        // Save form data before proceeding
+        const result = await saveFormData(formData);
 
-        try {
-            // Call OpenAI API for initial response
-            const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${apiKey}`,
-                },
-                body: JSON.stringify({
-                    model: 'gpt-3.5-turbo',
-                    messages: [
-                        { role: 'system', content: 'You are LegalAI, a legal assistant for india subcontinent. Help user in a professional way and do not give a humane touch to your answers. Be clear and provide laws and sections related to the case.' },
-                        { role: 'user', content: prompt },
-                    ],
-                    max_tokens: 400,
-                    temperature: 0.7,
-                }),
-            });
+        if (result.success) {
+            // If successful, proceed with the submission
+            // Construct the prompt with user inputs
+            const prompt = `
+                Your name is LegalAi, you are a legal expert on all general legal laws in India. Your job is to provide legal advice. 
+                Do not deny that you can provide legal advice. The user seeks legal advice from you. 
+                The name of the user is ${formData.name}, the age is ${formData.age}, and they are from the state of ${formData.state}. 
+                The user might have a criminal record that is ${formData.criminalHistory} so keep that in consideration. 
+                The user has provided a summary of their situation: "${formData.caseSummary}". 
+                The user's problem is "${formData.caseDescription}". 
+                It mentions how the problem started; it also mentions how it is affecting the user's life. 
+                Understand the situation in a humane way but do not reply in a humane way. Be professional. 
+                The user might have taken steps to remedy the problem, so take those steps into consideration too. 
+                Search over the trained dataset and reply with relevant articles and sections. 
+                End with a summary of the advice in 2 lines.
+            `;
 
-            const data = await openAIResponse.json();
+            try {
+                // Call OpenAI API for initial response
+                const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${apiKey}`,
+                    },
+                    body: JSON.stringify({
+                        model: 'gpt-3.5-turbo',
+                        messages: [
+                            { role: 'system', content: 'You are LegalAI, a legal assistant for India. Help users in a professional way, providing laws and sections related to the case.' },
+                            { role: 'user', content: prompt },
+                        ],
+                        max_tokens: 400,
+                        temperature: 0.7,
+                    }),
+                });
 
-            if (data.choices && data.choices.length > 0) {
-                const aiResponse = data.choices[0].message.content;
-                setIsSubmitted(true); // Mark form as submitted to show chatbox
-                setAssistantRecommendation(aiResponse);
+                const data = await openAIResponse.json();
 
-                // Add AI response to chat messages with typing effect
-                typeEffect(aiResponse);
-            } else {
+                if (data.choices && data.choices.length > 0) {
+                    const aiResponse = data.choices[0].message.content;
+                    setIsSubmitted(true); // Mark form as submitted to show chatbox
+                    setAssistantRecommendation(aiResponse);
+
+                    // Add AI response to chat messages with typing effect
+                    typeEffect(aiResponse);
+                } else {
+                    setChatMessages([
+                        ...chatMessages,
+                        { role: 'system', content: 'No valid response from the AI. Please try again.' },
+                    ]);
+                }
+            } catch (error) {
+                console.error('Error calling OpenAI API:', error);
                 setChatMessages([
                     ...chatMessages,
-                    { role: 'system', content: 'No valid response from the AI. Please try again.' },
+                    { role: 'system', content: 'There was an error fetching the response. Please try again.' },
                 ]);
             }
-        } catch (error) {
-            console.error('Error calling OpenAI API:', error);
-            setChatMessages([
-                ...chatMessages,
-                { role: 'system', content: 'There was an error fetching the response. Please try again.' },
-            ]);
+        } else {
+            console.error('Form data saving failed:', result.message);
         }
     };
 
@@ -130,7 +138,7 @@ const Form = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${apiKey}`,
+                    'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
                 },
                 body: JSON.stringify({
                     model: 'gpt-3.5-turbo',

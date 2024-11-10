@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite ",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -12,8 +12,13 @@
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
     "@material-tailwind/react": "^2.1.10",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "express": "^4.21.1",
     "jspdf": "^2.5.2",
+    "legalai": "file:",
+    "mongoose": "^8.8.1",
     "openai": "^4.71.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
