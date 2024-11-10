@@ -4,7 +4,7 @@ const Testimonials = () => {
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center">
                     <div className="text-center">
-                        <p className="text-lg font-medium text-gray-600 font-pj">2,157 people have said how good LegalAi is.</p>
+                        <p className="text-lg font-medium text-gray-600 font-pj">2,157 people have said how good LawLink is.</p>
                         <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">Our happy clients say about us</h2>
                     </div>
 
@@ -56,7 +56,7 @@ const Testimonials = () => {
                                         </div>
 
                                         <blockquote className="flex-1 mt-8">
-                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">“LegalAI has been a game changer for my small business. The legal templates and advice I get from this platform are not only accurate but also easy to understand. The chatbot feature saved me so much time!”</p>
+                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">LawLink  has been a game changer for my small business. The legal templates and advice I get from this platform are not only accurate but also easy to understand. The chatbot feature saved me so much time!”</p>
                                         </blockquote>
                                     </div>
 
@@ -102,7 +102,7 @@ const Testimonials = () => {
                                         </div>
 
                                         <blockquote className="flex-1 mt-8">
-                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">“As a freelancer, I was always worried about contracts and legal terms. LegalAI simplified everything for me. The PDF generator is excellent and has all the key legal clauses I need. It's a must-have for anyone working independently!”</p>
+                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">“As a freelancer, I was always worried about contracts and legal terms. LawLink simplified everything for me. The PDF generator is excellent and has all the key legal clauses I need. It's a must-have for anyone working independently!”</p>
                                         </blockquote>
                                     </div>
 
@@ -148,7 +148,7 @@ const Testimonials = () => {
                                         </div>
 
                                         <blockquote className="flex-1 mt-8">
-                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">“LegalAI helped us draft our company's terms and conditions in a fraction of the time. The AI-powered assistant provided me with relevant legal knowledge tailored to my startup, which gave me peace of mind knowing we were legally covered.”</p>
+                                            <p className="text-lg leading-relaxed text-gray-900 font-pj">LawLink helped us draft our company's terms and conditions in a fraction of the time. The AI-powered assistant provided me with relevant legal knowledge tailored to my startup, which gave me peace of mind knowing we were legally covered.”</p>
                                         </blockquote>
                                     </div>
 

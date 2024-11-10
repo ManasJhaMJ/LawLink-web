@@ -18,7 +18,7 @@ function Home() {
                 {/* Content Centering */}
                 <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white px-6">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-                        Welcome to Legal_Ai
+                        Welcome to LawLink
                     </h1>
                     <p className="text-lg sm:text-xl mb-6 max-w-3xl mx-auto">
                         Get reliable and expert legal advice at your fingertips. Our AI-powered legal assistant is here to help with all your legal needs.

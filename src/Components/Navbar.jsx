@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-semibold text-blue-600">
-          <a href="/">Legal_Ai</a>
+          <a href="/">LawLink</a>
         </div>
 
         {/* Navbar Links (desktop view) */}
